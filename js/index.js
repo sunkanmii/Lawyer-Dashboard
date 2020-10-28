@@ -54,7 +54,7 @@ let activeCasesObj = {
         'rgba(255, 159, 64, 1)'
     ]
 }
-let newCaseObj = {
+let newCasesObj = {
     label: 'new cases',
     data: [12, 15, 14, 12, 10, 2],
     backgroundColor: 'transparent',
@@ -66,49 +66,38 @@ let newCaseObj = {
 
 Chart.platform.disableCSSInjection = true;
 
-// let ctx = document.getElementById('myChart');
-// let myChart = new Chart(ctx, {
-//     type: 'line',
-//     data: {
-//         labels: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-//         datasets: [closedCasesObj, activeCasesObj, newCaseObj]
-//     },
-//     options: {
-//         scales: {
-//             yAxes: [{
-//                 ticks: {
-//                     beginAtZero: true
-//                 }
-//             }]
-//         }
-//     }
-// });
 
 let casesFunc = (closedCasesArr, activeCasesArr, newCasesArr) => {
     closedCasesObjDuplicate = closedCasesObj;
     activeCasesObjDuplicate = activeCasesObj;
     newCasesObjDuplicate = newCasesObj;
-
+    
     closedCasesObjDuplicate.data = closedCasesArr;
     activeCasesObjDuplicate.data = activeCasesArr;
     newCasesObjDuplicate.data = newCasesArr;
     
-    let myNewChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-            datasets: [closedCasesObjDuplicate, activeCasesObjDuplicate, newCasesObjDuplicate]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
-            }
-        }
-    })
+    let allCases = [closedCasesObjDuplicate, activeCasesObjDuplicate, newCasesObjDuplicate];
+    
+    return allCases;
 }
 
-casesFunc([12, 19, 3, 5, 2, 3], [24, 10, 23, 15, 22, 13], [12, 15, 14, 12, 10, 2]);
+let allCases = casesFunc([12, 19, 3, 5, 2, 3], [24, 10, 23, 15, 22, 13], [12, 15, 14, 12, 10, 2]);
+
+let ctx = document.getElementById('myChart');
+
+let myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+        datasets: allCases
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+})
