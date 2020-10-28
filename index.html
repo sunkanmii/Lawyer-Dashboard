@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DSC Unilag Certificate Generator</title>
+    <meta name="msapplication-tap-highlight" , content="none" />
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="MyLawNG">
+    <meta name="apple-mobile-web-app-title" content="MyLawNG">
+    <meta name="theme-color" content="#34495E">
+    <meta name="msapplication-navbutton-color" content="#FF9800">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="index.html">
+    <link rel="icon" sizes="128x128" href="">
+    <link rel="apple-touch-icon" sizes="128x128" href="">
+    <link rel="icon" sizes="192x192" href="">
+    <link rel="apple-touch-icon" sizes="192x192" href="">
+    <link rel="icon" sizes="256x256" href="">
+    <link rel="apple-touch-icon" sizes="256x256" href="">
+    <link rel="icon" sizes="384x384" href="">
+    <link rel="apple-touch-icon" sizes="384.x384" href="">
+    <link rel="icon" sizes="512x512" href="/imgs/logo-1.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+    <link rel="stylesheet" type="text/css" href="./js/package/dist/Chart.min.css">
+</head>
+
+<body>
+    <header>
+        <section class="logo-section">
+            <span class="code-logo"><img class="cropped-logo" src="./imgs/logo-1.png" alt="logo icon"></span>
+            <h1>Lawyer Dashboard</h1>
+        </section>
+
+        <input type="checkbox" id="toggle-butt" />
+
+        <label for="toggle-butt" class="bread-crumbs">
+            <div class="bread-crumb"></div>
+            <div class="bread-crumb"></div>
+            <div class="bread-crumb"></div>
+        </label>
+
+        <nav class="section-links">
+            <ul class="home-links">
+                <li id="gen-cert"><a href="#">Home</a>
+                </li>
+
+                <li><a href="#">Dashboard</a>
+                    <hr class="active-cert">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-section">
+            <section class="card">
+                <p>Requests in progress</p>
+                <span>17</span>
+            </section>
+            <section class="card">
+                <p>Lawyers available</p>
+                <span>15</span>
+            </section>
+            <section class="card">
+                <p>New cases today</p>
+                <span>5</span>
+            </section>
+        </section>
+        
+        <section class='dropdown-section'>
+            <button class='title menu pointerCursor'>
+                This month 
+                <img src="" class="drop-img" alt="">
+            </button>
+
+            <div class="dropdown hide">
+                <button class='option' id='option6' onclick="">April</button>
+                <button class='option' id='option5' onclick="">May</button>
+                <button class='option' id='option4' onclick="">June</button>
+                <button class='option' id='option3' onclick="">July</button>
+                <button class='option' id='option2' onclick="">August</button>
+                <button class='option' id='option1' onclick="">September</button>
+                <button class='option hide' id='option0' onclick="">This month</button>
+            </div>
+    
+        </section>
+        
+        <section class="canvas-container">
+            <canvas id="myChart" width="400" height="400"></canvas>
+        </section>
+        
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src='./js/package/dist/Chart.bundle.js'></script>
+    <script src='./js/index.js'></script>
+    <script>
+       let title = document.querySelector(".title");
+       let dropdown = document.querySelector("dropdown");
+       let options = document.querySelectorAll(".options");
+        
+       title.addEventListener('click', () =>{
+        
+       })
+
+       for(let i = 0; i < options.length; i++){
+           options[i].addEventListener('click', () => {
+
+           })
+       }
+   </script>
+</body>
+
+</html>
