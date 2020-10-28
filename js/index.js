@@ -160,7 +160,7 @@ for (let i = 0; i < options.length; i++) {
         let temp = [];
         let multi = [];
         for (let j = 0; j < 3; j++) {
-            for (let k = 0; k < 6; k++) {
+            for (let k = 0; k < 14; k++) {
                 temp.push(getRandomInt(3, 10));
             }
             multi.push(temp);
