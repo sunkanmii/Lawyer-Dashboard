@@ -62,10 +62,7 @@ let newCasesObj = {
     borderColor: 'gold'
 }
 
-
-
 Chart.platform.disableCSSInjection = true;
-
 
 let casesFunc = (closedCasesArr, activeCasesArr, newCasesArr) => {
     closedCasesObjDuplicate = closedCasesObj;
