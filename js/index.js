@@ -81,7 +81,7 @@ const casesFunc = (closedCasesArr, activeCasesArr, newCasesArr) => {
     let myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+            labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
             datasets: allCases
         },
         options: {
@@ -170,7 +170,7 @@ for (let i = 0; i < options.length; i++) {
         if (i != 6) {
             allCases = casesFunc(multi[0], multi[1], multi[2]);
         } else {
-            allCases = casesFunc([12, 19, 3, 5, 2, 3], [24, 10, 23, 15, 22, 13], [12, 15, 14, 12, 10, 2]);
+            allCases = casesFunc([12, 19, 3, 5, 2, 3, 15, 11, 10], [24, 10, 23, 15, 22, 13, 13, 16, 12], [12, 15, 14, 12, 10, 2, 16, 5, 10]);
         }
     })
 }
