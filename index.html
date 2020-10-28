@@ -46,7 +46,7 @@
 
         <nav class="section-links">
             <ul class="home-links">
-                <li id="gen-cert"><a href="#">Home</a>
+                <li id="gen-cert"><a href="http://mylawlegal.com/">Home</a>
                 </li>
 
                 <li><a href="#">Dashboard</a>
@@ -71,10 +71,10 @@
                 <span>5</span>
             </section>
         </section>
-        
+
         <section class='dropdown-section'>
             <button class='title menu pointerCursor'>
-                This month 
+                This month
                 <img src="" class="drop-img" alt="">
             </button>
 
@@ -85,37 +85,17 @@
                 <button class='option' id='option3' onclick="">July</button>
                 <button class='option' id='option2' onclick="">August</button>
                 <button class='option' id='option1' onclick="">September</button>
-                <button class='option hide' id='option0' onclick="">This month</button>
+                <button class='option' id='option0' onclick="">This month</button>
             </div>
-    
+
         </section>
-        
+
         <section class="canvas-container">
             <canvas id="myChart" width="400" height="400"></canvas>
         </section>
-        
     </main>
-
-    <footer>
-
-    </footer>
     <script src='./js/package/dist/Chart.bundle.js'></script>
     <script src='./js/index.js'></script>
-    <script>
-       let title = document.querySelector(".title");
-       let dropdown = document.querySelector("dropdown");
-       let options = document.querySelectorAll(".options");
-        
-       title.addEventListener('click', () =>{
-
-       })
-
-       for(let i = 0; i < options.length; i++){
-           options[i].addEventListener('click', () => {
-        
-           })
-       }
-   </script>
 </body>
 
 </html>
