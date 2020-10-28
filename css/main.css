@@ -270,13 +270,13 @@ main .canvas-container{
     justify-items: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
 .dropdown{
 	border: 0.1rem solid lightgrey;
 	display: flex;
 	flex-wrap: wrap;
 	width: 5.8rem;
-	margin-bottom: 1rem;
 }
 
 .dropdown-section .title{
